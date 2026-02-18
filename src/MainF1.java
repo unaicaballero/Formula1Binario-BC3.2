@@ -8,6 +8,7 @@ public class MainF1 {
 
     public static void main(String[] args) {
 
+        //inicializo para saber si el fichero de pilotos existe
         cargarPilotos();
 
         Scanner sc = new Scanner(System.in);
@@ -38,8 +39,9 @@ public class MainF1 {
 
     public static void cargarPilotos() {
 
+        //sirve para comprobar que el fichero existe
         File file = new File(FICHERO);
-
+        //si el fichero no existe hace un return hacia el switch y cuando se vuelva a inicializar el cargarpiloto se creara el archivo.
         if (!file.exists()) {
             System.out.println("No existe fichero binario. Se creará al guardar.");
             return;
